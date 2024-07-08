@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import DocumentDropper from './components/DocumentDropper/index';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bem vindo as configurações de chatbot WhatsApp</h1>
+      <p>Voltar para a listagem</p>
+      <form>
+         <input placeholder='Nome do chatbot'/>
+         <input placeholder='Versão'/>
+         <DocumentDropper/>
+         <button>Voltar</button>
+         <button>Salvar chatbot</button>
+      </form>
     </div>
   );
 }
