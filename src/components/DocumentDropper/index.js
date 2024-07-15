@@ -9,10 +9,11 @@ const DragAreaContainer = styled.div`
  align-items: center;
  justify-content: center;
  min-height: 100px;
- max-width: 70%;
+ width: 1007px;
  flex-direction: column;
  background: #ffffff;
  border: 2px dashed #d5d9e1;
+ border-radius: 6px;
  cursor: pointer;
 `
 const Image = styled.img`
@@ -23,10 +24,13 @@ const Image = styled.img`
 const Browse = styled.button`
 
 `
+const DocumentDropperContainer = styled.div`
+  width: 1000px;
+`
 
 function DocumentDropper () {
   return (
-    <div>
+    <DocumentDropperContainer>
         <h3>Documentos</h3>
         <DragAreaContainer>
             <Image src ={iconeImg} alt="icone"/>
@@ -35,7 +39,7 @@ function DocumentDropper () {
             
         </DragAreaContainer>
 
-    </div>
+    </DocumentDropperContainer>
   )
 }
 
