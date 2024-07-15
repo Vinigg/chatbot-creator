@@ -7,6 +7,8 @@ import SaveButton from './components/SaveButton';
 import styled from 'styled-components';
 import SelectChatbotVersion from './components/SelectChatbotVersion';
 import Header from './components/Header';
+import StepsStatus from './components/StepsStatus';
+
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -41,6 +43,7 @@ function App() {
   return (
     <AppContainer>
       <Header/>
+      <StepsStatus/>
       <form>
         <InputContainers>
           <InputChatbotName/>
