@@ -1,23 +1,22 @@
 import styled from "styled-components"
 
+
 const BotInformationsContainer = styled.div`
+    padding: 0 10px 0 5px;
     display: flex;
     align-items: center;
     margin-left: 15px;
-    border-bottom: solid #5064B9;
+    border-bottom: solid ${props => props.active ? props.color : "#FFF"};
     p{
         margin: 10px;
-        color: #5064B9;
-        font-weight: bold;
+        color: ${(props)=> props.color};
     }    
 `
 const StepNumberCircle = styled.div`
     width: 20px;
     height: 20px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
-    background: #5064B9;
+    background-color: ${(props)=>props.color};
     display: flex;
     color: white;
     justify-content: center;
@@ -26,9 +25,9 @@ const StepNumberCircle = styled.div`
 
 const BotInformations = () => {
   return (
-    <BotInformationsContainer>
-        <StepNumberCircle>1</StepNumberCircle>
-        <p>Base de Informações</p>
+    <BotInformationsContainer color={"#5064B9"} active = {true}>
+        <StepNumberCircle color={"#5064B9"}>1</StepNumberCircle>
+        <p>Base de informações</p>
     </BotInformationsContainer>
   )
 }

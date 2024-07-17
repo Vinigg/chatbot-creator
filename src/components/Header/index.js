@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import Configs from "../Configs"
 import Profile from "../Profile"
+import ConfigsButton from "../ConfigsButton"
 
 const HeaderContainer = styled.div`
     margin-left: 20px;
@@ -33,7 +33,7 @@ const Header = () => {
             <h4>Aqui você pode criar seu chatbot</h4>
         </TextContainer>
         <ConfigProfileContainer>
-            <Configs/>
+            <ConfigsButton/>
             <Profile/>
         </ConfigProfileContainer>
         

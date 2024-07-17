@@ -16,10 +16,10 @@ const ConfigContainer = styled.div`
         padding: 5px;
     }
 `
-const Configs = () => {
+const ConfigsButton = () => {
   return (
     <ConfigContainer><img src={Img} alt="Config"/></ConfigContainer>
   )
 }
 
-export default Configs
+export default ConfigsButton
