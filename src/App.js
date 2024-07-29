@@ -1,10 +1,9 @@
 import './App.css';
+import React from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
 import StepsStatus from './components/StepsStatus';
-import StepOne from './components/SetepOne';
-
-
+import { useState, useEffect } from 'react';
 
 const AppContainer = styled.div`
   h3{
@@ -15,14 +14,23 @@ const AppContainer = styled.div`
   }
 `
 
+export const Context = React.createContext();
 
 function App() {
+
+  const [currentStep, setCurrentStep] = useState(true)
+  
+  useEffect(()=>{
+    setCurrentStep(true)
+  },[])
+
   return (
-    <AppContainer>
-      <Header/>
-      <StepsStatus/>
-      <StepOne/>
-    </AppContainer>
+    <Context.Provider value={[currentStep, setCurrentStep]}>
+      <AppContainer>
+        <Header/>
+        <StepsStatus/>
+      </AppContainer>
+    </Context.Provider>
   );
 }
 

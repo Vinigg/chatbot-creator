@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { Context } from "../../App"
+import { useContext } from "react"
 
 const Button = styled.button`
   margin: 0 150px 0 0;
@@ -14,9 +16,10 @@ const Button = styled.button`
 `
 
 const ReturnButton = () => {
+  const [currentStep, setCurrentStep] = useContext(Context)
   return (
     <div>
-      <Button>Voltar</Button>
+      <Button onClick={()=> {setCurrentStep(!currentStep)}}>Voltar</Button>
     </div>
     
   )

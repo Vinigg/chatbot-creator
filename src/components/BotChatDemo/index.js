@@ -5,10 +5,10 @@ const BotChatDemoContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 15px;
-    border-bottom: solid ${props => props.active ? props.color : "#FFF"};
+    border-bottom: solid ${props => props.active === true ? props.color : "#FFF"};
     p{
         margin: 10px;
-        color: ${props => props.active ? props.color : "#A0A0A0"};
+        color: ${props => props.active === true ? props.color : "#A0A0A0"};
     }    
 `
 const StepNumberCircle = styled.div`
@@ -23,10 +23,10 @@ const StepNumberCircle = styled.div`
     justify-content: center;
     
 `
-const BotChatDemo = () => {
+const BotChatDemo = (stepAcitved) => {
   return (
-    <BotChatDemoContainer color={"#5064B9"} active={false}>
-        <StepNumberCircle color={"#5064B9"} active={false}>2</StepNumberCircle>
+    <BotChatDemoContainer color={"#5064B9"} active = {stepAcitved.situation}>
+        <StepNumberCircle color={"#5064B9"} active = {stepAcitved.situation}>2</StepNumberCircle>
         <p>Chat</p>
     </BotChatDemoContainer>
   )
