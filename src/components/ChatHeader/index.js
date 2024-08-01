@@ -18,11 +18,11 @@ const BotIcon = styled.img`
     width: 25px;
     height: 25px;
 `
-const ChatHeader = () => {
+const ChatHeader = (props) => {
   return (
     <ChatHeaderContainer>
         <BotIcon src={Incon}/>
-        <p>Nome do chatbot</p>
+        <p>{props.chatName}</p>
         
     </ChatHeaderContainer>
   )
